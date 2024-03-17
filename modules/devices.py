@@ -58,7 +58,7 @@ def torch_gc():
 
     if torch.cuda.is_available():
         with torch.cuda.device(get_cuda_device_string()):
-            torch.cuda.empty_cache()
+            #torch.cuda.empty_cache()
             torch.cuda.ipc_collect()
 
     if has_mps():
